@@ -18,7 +18,7 @@ function App() {
     }
 
     fetch();
-  }, []); // what can you do with this array to trigger a fetch every time the page changes?
+  }, [page]); // what can you do with this array to trigger a fetch every time the page changes?
 
   return (
     <>
@@ -31,6 +31,7 @@ function App() {
         <button >Next Page</button>
       </div>
       {/* pass the beanie babies into the BeaniesList component */}
+      <BeaniesList beanieBabies={beanieBabies}/>
     </>
   );
 }
